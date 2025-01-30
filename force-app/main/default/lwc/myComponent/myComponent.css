@@ -1,0 +1,38 @@
+/* component-wide overrides */
+:host {
+  --lwc-fontSize3: 2rem;
+  --sds-c-button-brand: #ff6600;
+  --lwc-c-button-dohicky: #073e15;
+  --lwc-cardColorBackground: #33ff88;
+  background-image: var(slds-icon-custom-8);
+}
+
+.slds-tabs-mobile__item:last-child {
+  height: auto;
+}
+/* changes scoped to a single class */
+.sdsOverride {
+  --sds-c-button-brand-color-background: #bb00ff;
+  --sds-c-button-brand-color-background-hover: #8700b8;
+  --sds-c-button-brand-color-border: #bb00ff;
+  --sds-c-button-brand-color-border-hover: #8700b8;
+}
+
+/* overrides an out of the box slds class */
+.slds-box {
+  background-color: orange;
+}
+
+.slds-box_xx-small {
+  padding: 0.25rem;
+}
+
+lightning-tabset {
+  --slds-c-tabs-list-color-border: transparent;
+  --slds-c-tabs-item-spacing-block-start: var(--lwc-spacingXSmall);
+  --slds-c-tabs-item-spacing-block-end: var(--lwc-spacingXSmall);
+}
+
+.test-utility-class {
+  position: static;
+}

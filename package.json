@@ -1,0 +1,49 @@
+{
+  "name": "salesforce-app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Salesforce App",
+  "scripts": {
+    "lint": "eslint **/{aura,lwc}/**/*.js",
+    "test": "npm run test:unit",
+    "test:unit": "sfdx-lwc-jest",
+    "test:unit:watch": "sfdx-lwc-jest --watch",
+    "test:unit:debug": "sfdx-lwc-jest --debug",
+    "test:unit:coverage": "sfdx-lwc-jest --coverage",
+    "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
+    "prettier:verify": "prettier --check \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
+    "postinstall": "husky install",
+    "precommit": "lint-staged",
+    "lint:styles": "stylelint './**/*.css' --config=.stylelintrc.yml",
+    "lint:components": "eslint '**/*.{html,cmp}' --ext .html,.cmp --config=.eslintrc.yml",
+    "slds:lint": "npm run lint:components; npm run lint:styles",
+    "fix": "stylelint '**/*.css' -c .stylelintrc.yml --fix ",
+    "report": "node node_modules/@salesforce-ux/stylelint-plugin-slds/build/report.js force-app/ -c .stylelintrc.yml",
+    "setup-lint": "node ./node_modules/@salesforce-ux/slds-linter/build/setup.js"
+  },
+  "devDependencies": {
+    "@prettier/plugin-xml": "^3.2.2",
+    "eslint": "8.57.1",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^28.8.1",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.1.0",
+    "prettier-plugin-apex": "^2.0.1",
+    "@lwc/eslint-plugin-lwc": "^2.1.0",
+    "@salesforce-ux/slds-linter": "^0.0.5",
+    "@salesforce/eslint-config-lwc": "^3.7.1",
+    "@salesforce/eslint-plugin-aura": "^2.1.0",
+    "@salesforce/eslint-plugin-lightning": "^1.0.1",
+    "@salesforce/sfdx-lwc-jest": "^7.0.1"
+  },
+  "lint-staged": {
+    "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
+      "prettier --write"
+    ],
+    "**/{aura,lwc}/**/*.js": [
+      "eslint"
+    ]
+  },
+  "dependencies": {}
+}
