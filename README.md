@@ -15,10 +15,10 @@ npm i @salesforce-ux/slds-linter
 Here are all the scripts that are needed.
 
 ```
-    "lint:styles": "stylelint './**/*.css' --config=.stylelintrc.yml",
-    "lint:components": "eslint '**/*.{html,cmp}' --ext .html,.cmp --config=.eslintrc.yml",
+    "lint:styles": "stylelint \"./**/*.css\" --config=.stylelintrc.yml",
+    "lint:components": "eslint \"**/*.{html,cmp}\" --ext .html,.cmp --config=.eslintrc.yml",
     "slds:lint": "npm run lint:components; npm run lint:styles",
-    "fix": "stylelint '**/*.css' -c .stylelintrc.yml --fix ",
+    "fix": "stylelint \"**/*.css\" -c .stylelintrc.yml --fix ",
     "report": "node node_modules/@salesforce-ux/stylelint-plugin-slds/build/report.js force-app/ -c .stylelintrc.yml",
     "setup-lint": "node ./node_modules/@salesforce-ux/slds-linter/build/setup.js"
 
