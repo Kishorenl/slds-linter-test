@@ -18,7 +18,7 @@
     "lint:components": "eslint \"**/*.{html,cmp}\" --ext .html,.cmp --config=.eslintrc.yml",
     "slds:lint": "npm run lint:components; npm run lint:styles",
     "fix": "stylelint \"**/*.css\" -c .stylelintrc.yml --fix ",
-    "report": "node node_modules/@salesforce-ux/stylelint-plugin-slds/build/report.js force-app/ -c .stylelintrc.yml",
+    "report": "node node_modules/@salesforce-ux/stylelint-plugin-slds/build/report.js force-app/",
     "setup-lint": "node ./node_modules/@salesforce-ux/slds-linter/build/setup.js"
   },
   "devDependencies": {
