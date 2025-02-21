@@ -45,10 +45,10 @@
       "eslint"
     ],
     "**/{aura,lwc}/**/*.{cmp,html}": [
-      "eslint --ext .html,.cmp --config=./node_modules/@salesforce-ux/slds-linter/build/.eslintrc.yml"
+      "eslint --ext .html,.cmp --config=./.eslintrc.yml"
     ],
     "**/{aura,lwc}/**/*.css": [
-      "stylelint './**/*.css' --config=./node_modules/@salesforce-ux/slds-linter/build/.stylelintrc.yml"
+      "stylelint './**/*.css' --config=./.stylelintrc.yml"
     ]
   }
 }
