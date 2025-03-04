@@ -13,13 +13,7 @@
     "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "prettier:verify": "prettier --check \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "postinstall": "husky install",
-    "precommit": "lint-staged",
-    "lint:styles": "stylelint \"./**/*.css\" --config=.stylelintrc.yml",
-    "lint:components": "eslint \"**/*.{html,cmp}\" --ext .html,.cmp --config=.eslintrc.yml",
-    "slds:lint": "npm run lint:components; npm run lint:styles",
-    "fix": "stylelint \"**/*.css\" -c .stylelintrc.yml --fix ",
-    "report": "node node_modules/@salesforce-ux/stylelint-plugin-slds/build/report.js force-app/",
-    "setup-lint": "node ./node_modules/@salesforce-ux/slds-linter/build/setup.js"
+    "precommit": "lint-staged"
   },
   "devDependencies": {
     "@lwc/eslint-plugin-lwc": "^2.1.0",
